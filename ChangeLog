@@ -1,0 +1,68 @@
+V0.3.3: 2012-06-01
+    - Fixed: Build time fixes for newer distros which use --as-needed as a
+             default GCC option
+
+
+V0.3.2: 2011-03-14
+    - Fixed: Improved building scripts for newer distros
+    - Fixed: Now doesn't display cursor. Thanks to "druciferre"
+
+
+V0.3.1: 2010-06-27
+    - Fixed: Minor change to the build scripts to fix compilation on distros
+             using the new DSO changes to ld (eg Fedora 13).
+
+
+V0.3: 2009-10-02
+    - Added: Smoothed starfield points for OpenGL/Hardware implementations
+             which support it.
+    - Added: Thrust particle emission from exhausts.
+    - Added: Exhausts do not respond to lighting, giving the effect of glowing
+             when not lit.
+    - Added: Support for the orbiting ship name on OpenGL implementations that
+             do not support 'Non-Power-Of-Two' textures.
+    - Added: The orbiting ship name is now randomly coloured.
+    - Added: PNG texture support, saving approximately 7.5MB of space.
+    - Added: Command line parameters: starnum, thustnum, switch
+    - Added: Setup options for XScreensaver
+    - Added: [Installer] Also look in /usr/local/kde4/bin and /usr/kde4/bin for
+             kde4-config
+    - Fixed: The orbiting ship name transparency is now also applied to the
+             stars
+    - Fixed: Don't show in KDE 'Lost & Found' menu on some distros if both the
+             KDE and Gnome versions are installed.
+    - Fixed: [Installer] Installing for KDE 4 on BSD should be fixed. Sed on
+             BSD does not support the newline character in substitutions.
+    - Misc:  Some texture improvements to Remlock
+    - Misc:  Reduced clipping distance.
+    - Misc:  Starfield optimisations which should improve performance,
+             especially on slower systems.
+
+
+V0.2: 2009-09-06
+    - Added: Support for KDE screensaver
+    - Added: Support for XScreensaver
+    - Added: Window ID can be passed with -window-id <id> parameter
+    - Added: Rotating starfield effect shown behind the models
+    - Added: Basic lighting
+    - Added: Use DisplayLists to 'precompile' OpenGL which should improve
+             performance, particularly on low end hardware
+    - Fixed: Random ints were only generated up to (upperbound - 2). Worm and
+             Zarch models were never shown as a consequence.
+    - Fixed: On slow systems, draw events could fill up the queue faster than
+             they were processed leading to unresponsive keyboard input or
+             termination of Eleet.
+    - Fixed: Explicitly free graphics memory for dynamically generated textures
+             on exit
+    - Misc:  Use gluCheckExtension() instead of parsing
+             glGetString(GL_EXTENSIONS);
+    - Misc:  Major code restructuring
+    - Misc:  Primitive optimisations to Asteroid, Cargo and Thargon
+    - Misc:  Texture improvement to docking bay doors on Dodec
+    - Misc:  Removed random wireframe mode (will likely be an option in future)
+    - Misc:  Removed orbiting text for implementations of OpenGL that don't
+             have NPOT texture support, in preparation for future work.
+
+
+V0.1: 2009-08-25
+    - Inital Release

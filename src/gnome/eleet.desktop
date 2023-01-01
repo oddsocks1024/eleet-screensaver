@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Eleet
+Comment=The Eleet Screen Saver
+TryExec=eleet
+Exec=eleet
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Screensaver;
+OnlyShowIn=GNOME;
+

@@ -1,0 +1,77 @@
+THE ELEET SCREENSAVER
+
+1. WHAT IS IT?
+A screensaver for use with Linux and UNIX, that pays homage to the classic
+space trading game of Elite. Eleet displays textured rotating OpenGL models
+of various spaceships, based on on those found in Elite.
+
+A random ship is chosen from a pool of 53 models and rotated against a
+starfield background, whilst the name of the ship orbits around it. Ships with
+exhausts will also emit thrust particles.
+
+
+2. HOW TO USE ELEET
+If Eleet compiles and installs successfully for you, then it should be
+available from the gnome-screensaver-preferences program or available in the
+KDE screensaver preferences. Xscreensaver is supported, but requires manual
+installation. ELEET does not support Gnome3.
+
+Eleet can also run standalone which may be useful for testing.
+
+SYNOPSIS
+eleet [-window-id <wid>] [-starnum <snum>] [-thrustnum <tnum>] [-switch <secs>]
+
+    <wid>: The X window identifier in which to render. If no window identifier
+           is specified, Eleet will create its own window.
+   <snum>: An integer specifying the number of stars to draw. The value must be
+           between 10 and 1000 inclusive. Default = 250.
+   <tnum>: An integer specifying the number of thrust particles to draw. The
+           value must be between 100 and 1000 inclusive. Default = 500
+   <secs>: An integer specifying the time in seconds to wait before switching
+           to another model. Must be between 30 and 600 inclusive. Default = 60
+
+
+3. FAQ
+
+    * Which screensaver systems are supported?
+    - Officially Gnome 2, KDE 4 and XScreensaver. Others might work but have
+      not been tested. Gnome 3 does not support screensavers
+
+    * I can't access the configuration or setup options, why?
+    - You should be able to configure the screensaver if you're using
+      XScreensaver.
+    - Configuring the screensaver under KDE is only supported, if the
+      XScreensaver configuration files are installed.
+    - The Gnome screensaver system, does not support screensaver configuration.
+
+    * I'm running KDE or Gnome and Eleet compiled and installed, but I can't
+      find it in the screensaver list. Any ideas?
+    - Some distributions replace Gnome's or KDE's native screensaver system
+      with Xscreensaver. Try following the install instructions for
+      Xscreensaver.
+    - You may need to specify the correct install prefix with configure. Eleet
+      is installed in the "/usr/local" prefix by default unless specified
+      otherwise.
+
+    * Why does support for Xscreensaver need to be installed manually?
+    - Xscreensaver does not appear to provide a mechanism to detect where its
+      screensavers and configuration files should be installed and I haven't
+      found a method which works safely and reliably across all supported
+      operating systems.
+
+    * Is KDE 3 supported?
+    - Not officially, as Eleet's build system is not configured for it. However
+      with some manual intervention you can probably get it working.
+
+    * Eleet runs really slowly, why?
+    - Eleet makes use of OpenGL. The most likely cause is that you don't
+      have hardware accelerated 3D and therefore most of the work is being
+      handled by the CPU instead of the GPU. Usually this is a misconfigured
+      system, or your graphics chipset is too old.
+
+    * Where do I send bug reports?
+    - See the AUTHORS file.
+
+    * Where do I send patches/contributions?
+    - See the AUTHORS file.
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<screensaver name="eleet" _label="Eleet">
+    <command arg=""/>
+    <number id="switch" type="slider" arg="-switch %"
+        _label="Switch Models (secs)" _low-label="30" _high-label="600"
+        low="30" high="600" default="60"/>
+    <number id="starnum" type="slider" arg="-starnum %"
+        _label="Stars" _low-label="10" _high-label="1000"
+        low="10" high="1000" default="250"/>
+    <number id="thrustnum" type="slider" arg="-thrustnum %"
+        _label="Thrust Particles" _low-label="100" _high-label="1000"
+        low="100" high="1000" default="500"/>
+
+    <_description>
+A screensaver for use with Linux and UNIX, that pays homage to the classic
+space trading game of Elite. Eleet displays textured rotating OpenGL models
+of various spaceships, based on on those found in Elite.
+
+A random ship is chosen from a pool of 53 models and rotated against a
+starfield background, whilst the name of the ship orbits around it. Ships with
+exhausts will also emit thrust particles.
+
+Written by Ian Chapman; 2009-2010.
+    </_description>
+</screensaver>

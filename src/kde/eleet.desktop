@@ -1,0 +1,27 @@
+[Desktop Entry]
+Name=Eleet (GL)
+Comment=The Eleet Screen Saver
+TryExec=eleet
+Exec=eleet
+StartupNotify=false
+Terminal=false
+Type=Service
+Icon=kscreensaver
+X-KDE-ServiceTypes=ScreenSaver
+X-KDE-Category=OpenGL Screen Savers
+X-KDE-Type=OpenGL
+Actions=InWindow;Root;Setup;
+
+[Desktop Action Setup]
+Exec=kxsconfig eleet
+Name=Setup...
+
+[Desktop Action InWindow]
+Exec=eleet -window-id %w
+Name=Display in specified window
+
+[Desktop Action Root]
+Exec=eleet -window-id %w
+Name=Display in Root Window
+NoDisplay=true
+
